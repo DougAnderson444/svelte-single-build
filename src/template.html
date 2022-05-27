@@ -8,18 +8,22 @@
 
         <link rel="icon" type="image/png" href="/favicon.png" />
 
+        <script defer type="module">
+            %%script%%
+        </script>
+
         <script id="svelte64" type="application/json">
-            %%svelte64%%
+            <!-- // %%svelte64%% -->
         </script>
 
         <script defer type="module">
             // load the base64 script from docuemnt getelementbyid data
-            const src64 = document.getElementById("svelte64").textContent
+            // const src64 = document.getElementById("svelte64").textContent
 
             // load code from base64 into the DOM
-            const script = document.createElement("script")
-            script.textContent = atob(src64)
-            document.head.appendChild(script)
+            // const script = document.createElement("script")
+            // script.textContent = atob(src64)
+            // document.head.appendChild(script)
         </script>
     </head>
 
